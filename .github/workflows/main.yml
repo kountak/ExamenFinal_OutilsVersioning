@@ -32,4 +32,4 @@ jobs:
 
     - name: Check code quality with Ruff
       run: |
-        ruff .
+        ruff check .
