@@ -1,0 +1,28 @@
+Exercice 3: Explication de Git Worktree
+Git Worktree est une fonctionnalité qui permet de vérifier plusieurs branches en même temps, dans des répertoires séparés. Cela peut être très utile lorsque vous travaillez sur plusieurs fonctionnalités ou correctifs en parallèle.
+
+Exemple d'utilisation :
+
+1. Créer un nouveau worktree :
+Supposons que vous êtes sur la branche main et que vous voulez travailler sur une nouvelle fonctionnalité dans une autre branche. Vous pouvez créer un nouveau worktree avec :
+
+```bash
+git worktree add ../nouvelle_fonctionnalite branche_fonctionnalite
+```
+
+Cela crée un nouveau répertoire ../nouvelle_fonctionnalite qui est associé à la branche branche_fonctionnalite.
+
+2. Travailler dans le worktree :
+Vous pouvez maintenant aller dans le répertoire ../nouvelle_fonctionnalite et travailler sur cette branche sans affecter votre répertoire de travail principal.
+
+3. Supprimer un worktree :
+Une fois votre travail terminé et fusionné, vous pouvez supprimer le worktree avec :
+
+```bash
+git worktree remove ../nouvelle_fonctionnalite
+```
+
+## Avantages :
++ Isolement : Travailler sur plusieurs branches sans avoir à faire des commits non finis ou à stasher des modifications.
++ Rapidité : Les opérations sont plus rapides qu'avec des répertoires Git clonés distincts.
++ Cela facilite la gestion de plusieurs tâches simultanément tout en minimisant les conflits et les erreurs.
